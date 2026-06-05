@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ecología Caribe | Cuidado Profesional de Plantas en Montería</title>
+    <meta name="description" content="Servicio experto en el cuidado, mantenimiento y diagnóstico de plantas en Montería. Asesoría botánica adaptada al clima del Caribe colombiano.">
+    <meta name="keywords" content="cuidado de plantas Montería, jardinería Montería, mantenimiento de jardines, asesoría botánica, Ecología Caribe, plantas de interior">
+    <meta name="author" content="Kaar Loon">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables de CSS para consistencia de diseño */
+        :root {
+            --primary-color: #2d6a4f;
+            --secondary-color: #52b788;
+            --dark-color: #1b4332;
+            --light-bg: #f8fcf9;
+            --text-color: #333333;
+            --gray-text: #666666;
+            --white: #ffffff;
+        }
+
+        /* Reset Básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-color); background-color: var(--light-bg); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Utilidades */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .btn { display: inline-block; padding: 14px 28px; background-color: var(--primary-color); color: var(--white); font-weight: 600; border-radius: 8px; text-align: center; border: none; cursor: pointer; transition: background 0.3s ease; }
+        .btn:hover { background-color: var(--dark-color); }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--dark-color); margin-bottom: 40px; }
+        
+        /* Header */
+        header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { font-weight: 600; color: var(--text-color); transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+        
+        /* Hero Section */
+        .hero { padding: 100px 20px; background: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 100%); text-align: center; }
+        .hero h1 { font-size: 3rem; color: var(--dark-color); margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .hero p { font-size: 1.2rem; color: var(--text-color); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        
+        /* Beneficios */
+        .benefits { padding: 80px 0; background-color: var(--white); }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .benefit-card { padding: 30px; background: var(--light-bg); border-radius: 12px; text-align: center; border: 1px solid #e2ece4; }
+        .benefit-card h3 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.2rem; }
+        
+        /* Servicios */
+        .services { padding: 80px 0; }
+        .service-item { background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .service-item h3 { color: var(--dark-color); margin-bottom: 10px; }
+        
+        /* Prueba Social */
+        .social-proof { padding: 80px 0; background-color: var(--white); }
+        .testimonial { max-width: 800px; margin: 0 auto; text-align: center; font-style: italic; font-size: 1.1rem; color: var(--gray-text); border-left: 4px solid var(--secondary-color); padding-left: 20px; }
+        .testimonial-author { display: block; margin-top: 15px; font-weight: 600; font-style: normal; color: var(--dark-color); }
+        
+        /* Contacto y Transparencia */
+        .contact-section { padding: 80px 0; background-color: var(--light-bg); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-form { background: var(--white); padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; }
+        .company-info p { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .company-info strong { color: var(--dark-color); }
+        
+        /* Footer */
+        footer { background-color: var(--dark-color); color: var(--white); padding: 40px 0 20px; text-align: center; }
+        .footer-links { margin-top: 20px; margin-bottom: 20px; }
+        .footer-links a { color: #b7e4c7; margin: 0 10px; text-decoration: underline; font-size: 0.9rem; }
+        
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; /* Simplificado para móvil en landing ads */ }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">🌿 Ecología Caribe</div>
+            <nav class="nav-links">
+                <a href="#beneficios">Beneficios</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>El clima de Montería no tiene que marchitar tus plantas</h1>
+            <p>Especialistas en el cuidado, diagnóstico y recuperación de plantas de interior y jardines. Técnicas adaptadas al calor y la humedad del Caribe colombiano.</p>
+            <a href="#contacto" class="btn">Agenda tu Asesoría Botánica Hoy</a>
+        </div>
+    </section>
+
+    <section id="beneficios" class="benefits">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegir Ecología Caribe?</h2>
+            <div class="grid-3">
+                <div class="benefit-card">
+                    <h3>Adaptación Local</h3>
+                    <p>Conocemos el sustrato y las necesidades de hidratación específicas para las temperaturas de Montería, evitando que tus plantas sufran por el calor.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Tratamientos Seguros</h3>
+                    <p>Utilizamos productos y fertilizantes amigables con el medio ambiente, seguros para hogares con mascotas y niños.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Acompañamiento Real</h3>
+                    <p>No solo hacemos el mantenimiento, te enseñamos las rutinas de riego y luz precisas para que tus plantas prosperen por sí solas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="grid-3">
+                <div class="service-item">
+                    <h3>Diagnóstico Fitosanitario</h3>
+                    <p>Evaluación profesional para identificar plagas, hongos o deficiencias nutricionales antes de que sea demasiado tarde.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Mantenimiento Preventivo</h3>
+                    <p>Poda, limpieza de follaje, aireación de sustrato y aplicación de abono orgánico para mantener la vitalidad de tu jardín.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Asesoría de Espacios</h3>
+                    <p>Te ayudamos a elegir qué especies de plantas funcionarán mejor en tu casa u oficina según la iluminación natural disponible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <p class="testimonial">
+                "Pensé que mis calateas no sobrevivirían al calor de Montería. El equipo de Ecología Caribe ajustó mi rutina de riego y cambió el sustrato. Hoy están más frondosas que nunca. Un servicio honesto y puntual."
+                <span class="testimonial-author">- Cliente Local Verificado</span>
+            </p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 20px; color: var(--dark-color); font-size: 1.5rem;">Solicita información</h3>
+                    <form id="leadForm" onsubmit="procesarFormulario(event)">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono (WhatsApp)</label>
+                            <input type="tel" id="telefono" required placeholder="Tu número">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">¿En qué te podemos ayudar?</label>
+                            <textarea id="mensaje" rows="4" required placeholder="Ej: Necesito revisar unas plantas que se están secando..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Solicitar Asesoría</button>
+                        <p id="formStatus" style="display:none; margin-top:15px; color: var(--primary-color); font-weight: 600; text-align: center;"></p>
+                    </form>
+                </div>
+                
+                <div class="company-info">
+                    <h3 style="margin-bottom: 20px; color: var(--dark-color); font-size: 1.5rem;">Información Comercial</h3>
+                    <p>Somos un servicio local comprometido con la transparencia y la calidad. Estamos listos para atender tus consultas.</p>
+                    <div style="margin-top: 30px;">
+                        <p><strong>Titular:</strong> Kaar Loon</p>
+                        <p><strong>Dirección:</strong> Cra. 11AW # 23-45, Montería, Colombia</p>
+                        <p><strong>Teléfono:</strong> 3234456786</p>
+                        <p><strong>Correo:</strong> toonkalbar@gmail.com</p>
+                        <p><strong>Horario de atención:</strong> Lunes a Domingo de 8:00 am a 5:00 pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="color: #ffffff; margin-bottom: 10px;">🌿 Ecología Caribe</div>
+            <p>Cuidado profesional de plantas en Montería, Colombia.</p>
+            <div class="footer-links">
+                <a href="politica-de-privacidad.html">Política de Privacidad</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+            </div>
+            <p style="font-size: 0.8rem; color: #a8d5ba;">&copy; 2026 Kaar Loon - Ecología Caribe. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function procesarFormulario(e) {
+            e.preventDefault();
+            // Lógica simple para simular envío y mejorar la experiencia de usuario (UX)
+            const btn = e.target.querySelector('button');
+            const status = document.getElementById('formStatus');
+            
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+            
+            setTimeout(() => {
+                btn.style.display = 'none';
+                status.textContent = '¡Gracias! Hemos recibido tu solicitud. Te contactaremos dentro de nuestro horario de atención.';
+                status.style.display = 'block';
+                e.target.reset();
+            }, 1000);
+        }
+
+        // Scroll suave para enlaces del menú
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
